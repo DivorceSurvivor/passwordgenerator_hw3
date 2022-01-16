@@ -19,6 +19,18 @@ if(passwordLength > 128) {
   alert("password length must be less tha 129 characters");
   return "length more than 128 characters. Password not generated. Please retry."
 }
+let hasLc = confirm("click ok to include lowercase in password. Cancel to not not include.");
+let hasUc = confirm("click ok to include uppercase in password. Cancel to not not include.");
+let hasNbr = confirm("click ok to include numbers in password. Cancel to not not include.");
+let hasSc = confirm("click ok to include special character in password. Cancel to not not include.");
+if(!hasLc && 
+  !hasUc &&
+  !hasNbr &&
+  !hasSc ){
+    alert("you have to choose at least one charcater type");
+    return  ("you have to choose at least one charcater type. Password not generated. Try again.");
+  }
+
 }
 
 // Write password to the #password input
