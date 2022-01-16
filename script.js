@@ -1,6 +1,18 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+
+
+function generatePassword(){
+  console.log("generatePassword function called");
+let passwordLength =parseInt( prompt("Please put at least 8 characters and not more than 128 characters"));
+if(Number.isNaN(passwordLength)){
+  alert("bad length. It has to be a number. Please retry.");
+  return "bad length. Password not generated. Please retry."
+
+
+}
+}
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
