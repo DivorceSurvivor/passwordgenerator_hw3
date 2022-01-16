@@ -19,6 +19,7 @@ if(passwordLength > 128) {
   alert("password length must be less tha 129 characters");
   return "length more than 128 characters. Password not generated. Please retry."
 }
+}
 
 // Write password to the #password input
 function writePassword() {
