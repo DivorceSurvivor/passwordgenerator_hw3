@@ -1,7 +1,9 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-
-
+let myLcharacters='abcdefghijklmnopqrstuvwxyz'; 
+let myUcharacters='ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+let myNBRcharacters='0123456789'; 
+let mySPcharacters='!@#$%^&*()_+';
 
 function generatePassword(){
   console.log("generatePassword function called");
@@ -30,7 +32,30 @@ if(!hasLc &&
     alert("you have to choose at least one charcater type");
     return  ("you have to choose at least one charcater type. Password not generated. Try again.");
   }
+let possiblePasswordCharacters = '';
 
+if(hasLc){
+  possiblePasswordCharacters += myLcharacters;
+}
+
+if(hasUc){
+  possiblePasswordCharacters += myUcharacters;
+}
+
+if(hasNbr){
+  possiblePasswordCharacters += myNBRcharacters;
+}
+
+if(hasSc){
+  possiblePasswordCharacters += mySPcharacters;
+}
+
+let password='';
+
+for(let i=0; i<passwordLength; i++){
+password += possiblePasswordCharacters [Math.floor(Math.random()*possiblePasswordCharacters.length)];
+}
+return password;
 }
 
 // Write password to the #password input
